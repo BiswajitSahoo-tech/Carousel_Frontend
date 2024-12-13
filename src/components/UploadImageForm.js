@@ -89,7 +89,7 @@ function UploadImageForm({ onSuccess }) {
           required
         />
       </div>
-      <div className="form-group">
+      {/* <div className="form-group">
         <label>Sequence</label>
         <input
           type="number"
@@ -98,7 +98,7 @@ function UploadImageForm({ onSuccess }) {
           onChange={(e) => setSequence(Number(e.target.value))}
           required
         />
-      </div>
+      </div> */}
       <div className="form-group">
         <label>Image File</label>
         <input

@@ -16,34 +16,6 @@ function CarouselComponent() {
             .catch(err => console.error(err));
     }, []);
 
-    // Handle sequence update
-    // const updateImageSequence = (newSequence) => {
-    //     setImages(newSequence);
-    //     // Optionally, send updated sequence to backend
-    //     axios.put('http://localhost:5000/images/sequence', newSequence)
-    //         .then(() => console.log("Sequence updated"))
-    //         .catch(err => console.error(err));
-    // };
-
-    // // Handle drag-and-drop sorting
-    // const SortableContainer = sortableContainer(({ children }) => {
-    //     return <div>{children}</div>;
-    // });
-
-    // const SortableItem = sortableElement(({ image, idx }) => (
-    //     <Carousel.Item key={image._id}>
-    //         <img className="d-block w-100" src={`http://localhost:5000${image.imageUrl}`} alt={image.title} />
-    //         <Carousel.Caption>
-    //             <h3>{image.title}</h3>
-    //             <p>{image.description}</p>
-    //         </Carousel.Caption>
-    //     </Carousel.Item>
-    // ));
-
-    // const onSortEnd = ({ oldIndex, newIndex }) => {
-    //     const newOrder = arrayMoveMutable(images, oldIndex, newIndex);
-    //     updateImageSequence(newOrder);
-    // };
 
     return (
         <div className="container mt-5">
@@ -56,6 +28,7 @@ function CarouselComponent() {
                         <input
                             type="number"
                             value={interval}
+                            min={1}
                             onChange={(e) => setInterval(Number(e.target.value))}
                             className="form-control d-inline w-auto fw-bold"
                         />
